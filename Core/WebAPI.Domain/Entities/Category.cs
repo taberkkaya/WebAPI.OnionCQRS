@@ -14,9 +14,9 @@ namespace WebAPI.Domain.Entities
 
         }
 
-        public Category(int paretnId, string name, int prioriy)
+        public Category(int parentId, string name, int prioriy)
         {
-            ParentId = paretnId;
+            ParentId = parentId;
             Name = name;
             Priority = prioriy;
         }
