@@ -98,9 +98,9 @@ namespace WebAPI.Persistence.Migrations
                 columns: new[] { "Id", "CreatedDate", "IsDeleted", "Name" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 3, 27, 16, 40, 32, 848, DateTimeKind.Local).AddTicks(9028), false, "Sports" },
-                    { 2, new DateTime(2024, 3, 27, 16, 40, 32, 848, DateTimeKind.Local).AddTicks(9083), false, "Games" },
-                    { 3, new DateTime(2024, 3, 27, 16, 40, 32, 848, DateTimeKind.Local).AddTicks(9087), true, "Home" }
+                    { 1, new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(1932), false, "Electronics & Kids" },
+                    { 2, new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(2203), false, "Music, Clothing & Health" },
+                    { 3, new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(2220), true, "Electronics" }
                 });
 
             migrationBuilder.InsertData(
@@ -108,10 +108,10 @@ namespace WebAPI.Persistence.Migrations
                 columns: new[] { "Id", "CreatedDate", "IsDeleted", "Name", "ParentId", "Priority" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 3, 27, 16, 40, 32, 849, DateTimeKind.Local).AddTicks(551), false, "Elektrik", 0, 1 },
-                    { 2, new DateTime(2024, 3, 27, 16, 40, 32, 849, DateTimeKind.Local).AddTicks(553), false, "Moda", 0, 2 },
-                    { 3, new DateTime(2024, 3, 27, 16, 40, 32, 849, DateTimeKind.Local).AddTicks(555), false, "Bilgisayar", 1, 1 },
-                    { 4, new DateTime(2024, 3, 27, 16, 40, 32, 849, DateTimeKind.Local).AddTicks(556), false, "Kadın", 2, 1 }
+                    { 1, new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(3578), false, "Elektrik", 0, 1 },
+                    { 2, new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(3580), false, "Moda", 0, 2 },
+                    { 3, new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(3581), false, "Bilgisayar", 1, 1 },
+                    { 4, new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(3582), false, "Kadın", 2, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -119,9 +119,9 @@ namespace WebAPI.Persistence.Migrations
                 columns: new[] { "Id", "CategoryId", "CreatedDate", "Description", "IsDeleted", "Title" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2024, 3, 27, 16, 40, 32, 850, DateTimeKind.Local).AddTicks(4061), "Aperiam facilis alias impedit expedita.", false, "Saepe." },
-                    { 2, 2, new DateTime(2024, 3, 27, 16, 40, 32, 850, DateTimeKind.Local).AddTicks(4095), "Veritatis amet nam assumenda sequi.", true, "Et culpa." },
-                    { 3, 3, new DateTime(2024, 3, 27, 16, 40, 32, 850, DateTimeKind.Local).AddTicks(4117), "Voluptatum consequatur nam consequatur perferendis.", false, "Quia." }
+                    { 1, 1, new DateTime(2024, 3, 27, 21, 57, 48, 757, DateTimeKind.Local).AddTicks(5936), "Aut est veritatis eos quaerat.", false, "Enim." },
+                    { 2, 2, new DateTime(2024, 3, 27, 21, 57, 48, 757, DateTimeKind.Local).AddTicks(5968), "Maiores aut aut ducimus quo.", true, "İllum exercitationem." },
+                    { 3, 3, new DateTime(2024, 3, 27, 21, 57, 48, 757, DateTimeKind.Local).AddTicks(5989), "Voluptatem corrupti sequi neque et.", false, "Laborum." }
                 });
 
             migrationBuilder.InsertData(
@@ -129,9 +129,9 @@ namespace WebAPI.Persistence.Migrations
                 columns: new[] { "Id", "BrandId", "CreatedDate", "Description", "Discount", "IsDeleted", "Price", "Title" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2024, 3, 27, 16, 40, 32, 851, DateTimeKind.Local).AddTicks(6775), "Gül enim otobüs çıktılar adanaya.", 848.49m, false, 6.180246668487160m, "Kapının." },
-                    { 2, 1, new DateTime(2024, 3, 27, 16, 40, 32, 851, DateTimeKind.Local).AddTicks(6804), "Tempora ab eos accusantium ışık.", 884.15m, false, 4.922092466819860m, "Layıkıyla." },
-                    { 3, 1, new DateTime(2024, 3, 27, 16, 40, 32, 851, DateTimeKind.Local).AddTicks(6833), "Ratione aliquam kutusu ut koyun.", 398.07m, false, 7.413825425344480m, "Ipsam." }
+                    { 1, 1, new DateTime(2024, 3, 27, 21, 57, 48, 758, DateTimeKind.Local).AddTicks(7332), "İd fuga nam velit impedit.", 10m, false, 550.01058729543000m, "Rerum." },
+                    { 2, 1, new DateTime(2024, 3, 27, 21, 57, 48, 758, DateTimeKind.Local).AddTicks(7366), "Officiis ut dolorum nihil est.", 10m, false, 147.945660785871000m, "Sapiente." },
+                    { 3, 1, new DateTime(2024, 3, 27, 21, 57, 48, 758, DateTimeKind.Local).AddTicks(7391), "Et eaque consequatur quibusdam quae.", 10m, false, 427.913074871933000m, "Possimus." }
                 });
 
             migrationBuilder.CreateIndex(

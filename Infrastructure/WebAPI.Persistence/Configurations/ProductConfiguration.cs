@@ -23,8 +23,8 @@ namespace WebAPI.Persistence.Configurations
                 Title = faker.Lorem.Sentence(1),
                 Description = faker.Lorem.Sentence(5),
                 BrandId = 1,
-                Price = faker.Random.Decimal(0, 10),
-                Discount = faker.Finance.Amount(10, 1000),
+                Price = faker.Random.Decimal(0, 1000),
+                Discount = faker.Finance.Amount(10, 10),
                 IsDeleted = false,
                 CreatedDate = DateTime.Now,
             };
@@ -34,8 +34,8 @@ namespace WebAPI.Persistence.Configurations
                 Title = faker.Lorem.Sentence(1),
                 Description = faker.Lorem.Sentence(5),
                 BrandId = 1,
-                Price = faker.Random.Decimal(0, 10),
-                Discount = faker.Finance.Amount(10, 1000),
+                Price = faker.Random.Decimal(0, 1000),
+                Discount = faker.Finance.Amount(10, 10),
                 IsDeleted = false,
                 CreatedDate = DateTime.Now,
             };
@@ -45,8 +45,8 @@ namespace WebAPI.Persistence.Configurations
                 Title = faker.Lorem.Sentence(1),
                 Description = faker.Lorem.Sentence(5),
                 BrandId = 1,
-                Price = faker.Random.Decimal(0, 10),
-                Discount = faker.Finance.Amount(10, 1000),
+                Price = faker.Random.Decimal(0, 1000),
+                Discount = faker.Finance.Amount(10, 10),
                 IsDeleted = false,
                 CreatedDate = DateTime.Now,
             };
