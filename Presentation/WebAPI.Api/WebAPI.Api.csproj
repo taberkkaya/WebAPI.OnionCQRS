@@ -17,11 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\..\Infrastructure\WebAPI.Persistence\WebAPI.Persistence.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Infrastructure\WebAPI.Persistence\WebAPI.Persistence.csproj" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

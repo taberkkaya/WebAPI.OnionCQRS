@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using WebAPI.Application.Interfaces.Repositories;
 using WebAPI.Persistence.Context;
 using WebAPI.Persistence.Repositories;
+using WebAPI.Persistence.UnitOfWorks;
 
 namespace WebAPI.Persistence
 {
@@ -16,11 +17,13 @@ namespace WebAPI.Persistence
     {
         public static void AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<AppDbContext>(opt => 
+            services.AddDbContext<AppDbContext>(opt =>
                 opt.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
             services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
     }
 }
