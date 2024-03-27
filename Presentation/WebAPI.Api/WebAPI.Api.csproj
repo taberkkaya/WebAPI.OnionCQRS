@@ -20,8 +20,4 @@
     <ProjectReference Include="..\..\Infrastructure\WebAPI.Persistence\WebAPI.Persistence.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
