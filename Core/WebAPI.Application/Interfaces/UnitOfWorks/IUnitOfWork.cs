@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using WebAPI.Application.Interfaces.Repositories;
 using WebAPI.Domain.Common;
 
-namespace WebAPI.Persistence.UnitOfWorks
+namespace WebAPI.Application.UnitOfWorks
 {
     public interface IUnitOfWork : IAsyncDisposable
     {
