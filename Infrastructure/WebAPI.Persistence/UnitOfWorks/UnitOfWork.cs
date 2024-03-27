@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebAPI.Application.Interfaces.Repositories;
+using WebAPI.Application.UnitOfWorks;
 using WebAPI.Persistence.Context;
 using WebAPI.Persistence.Repositories;
 

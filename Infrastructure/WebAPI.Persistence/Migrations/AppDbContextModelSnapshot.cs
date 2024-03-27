@@ -49,23 +49,23 @@ namespace WebAPI.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 3, 27, 16, 40, 32, 848, DateTimeKind.Local).AddTicks(9028),
+                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(1932),
                             IsDeleted = false,
-                            Name = "Sports"
+                            Name = "Electronics & Kids"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 3, 27, 16, 40, 32, 848, DateTimeKind.Local).AddTicks(9083),
+                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(2203),
                             IsDeleted = false,
-                            Name = "Games"
+                            Name = "Music, Clothing & Health"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 3, 27, 16, 40, 32, 848, DateTimeKind.Local).AddTicks(9087),
+                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(2220),
                             IsDeleted = true,
-                            Name = "Home"
+                            Name = "Electronics"
                         });
                 });
 
@@ -101,7 +101,7 @@ namespace WebAPI.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 3, 27, 16, 40, 32, 849, DateTimeKind.Local).AddTicks(551),
+                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(3578),
                             IsDeleted = false,
                             Name = "Elektrik",
                             ParentId = 0,
@@ -110,7 +110,7 @@ namespace WebAPI.Persistence.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 3, 27, 16, 40, 32, 849, DateTimeKind.Local).AddTicks(553),
+                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(3580),
                             IsDeleted = false,
                             Name = "Moda",
                             ParentId = 0,
@@ -119,7 +119,7 @@ namespace WebAPI.Persistence.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 3, 27, 16, 40, 32, 849, DateTimeKind.Local).AddTicks(555),
+                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(3581),
                             IsDeleted = false,
                             Name = "Bilgisayar",
                             ParentId = 1,
@@ -128,7 +128,7 @@ namespace WebAPI.Persistence.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 3, 27, 16, 40, 32, 849, DateTimeKind.Local).AddTicks(556),
+                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(3582),
                             IsDeleted = false,
                             Name = "Kadın",
                             ParentId = 2,
@@ -172,28 +172,28 @@ namespace WebAPI.Persistence.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 3, 27, 16, 40, 32, 850, DateTimeKind.Local).AddTicks(4061),
-                            Description = "Aperiam facilis alias impedit expedita.",
+                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 757, DateTimeKind.Local).AddTicks(5936),
+                            Description = "Aut est veritatis eos quaerat.",
                             IsDeleted = false,
-                            Title = "Saepe."
+                            Title = "Enim."
                         },
                         new
                         {
                             Id = 2,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 3, 27, 16, 40, 32, 850, DateTimeKind.Local).AddTicks(4095),
-                            Description = "Veritatis amet nam assumenda sequi.",
+                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 757, DateTimeKind.Local).AddTicks(5968),
+                            Description = "Maiores aut aut ducimus quo.",
                             IsDeleted = true,
-                            Title = "Et culpa."
+                            Title = "İllum exercitationem."
                         },
                         new
                         {
                             Id = 3,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 3, 27, 16, 40, 32, 850, DateTimeKind.Local).AddTicks(4117),
-                            Description = "Voluptatum consequatur nam consequatur perferendis.",
+                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 757, DateTimeKind.Local).AddTicks(5989),
+                            Description = "Voluptatem corrupti sequi neque et.",
                             IsDeleted = false,
-                            Title = "Quia."
+                            Title = "Laborum."
                         });
                 });
 
@@ -239,34 +239,34 @@ namespace WebAPI.Persistence.Migrations
                         {
                             Id = 1,
                             BrandId = 1,
-                            CreatedDate = new DateTime(2024, 3, 27, 16, 40, 32, 851, DateTimeKind.Local).AddTicks(6775),
-                            Description = "Gül enim otobüs çıktılar adanaya.",
-                            Discount = 848.49m,
+                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 758, DateTimeKind.Local).AddTicks(7332),
+                            Description = "İd fuga nam velit impedit.",
+                            Discount = 10m,
                             IsDeleted = false,
-                            Price = 6.180246668487160m,
-                            Title = "Kapının."
+                            Price = 550.01058729543000m,
+                            Title = "Rerum."
                         },
                         new
                         {
                             Id = 2,
                             BrandId = 1,
-                            CreatedDate = new DateTime(2024, 3, 27, 16, 40, 32, 851, DateTimeKind.Local).AddTicks(6804),
-                            Description = "Tempora ab eos accusantium ışık.",
-                            Discount = 884.15m,
+                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 758, DateTimeKind.Local).AddTicks(7366),
+                            Description = "Officiis ut dolorum nihil est.",
+                            Discount = 10m,
                             IsDeleted = false,
-                            Price = 4.922092466819860m,
-                            Title = "Layıkıyla."
+                            Price = 147.945660785871000m,
+                            Title = "Sapiente."
                         },
                         new
                         {
                             Id = 3,
                             BrandId = 1,
-                            CreatedDate = new DateTime(2024, 3, 27, 16, 40, 32, 851, DateTimeKind.Local).AddTicks(6833),
-                            Description = "Ratione aliquam kutusu ut koyun.",
-                            Discount = 398.07m,
+                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 758, DateTimeKind.Local).AddTicks(7391),
+                            Description = "Et eaque consequatur quibusdam quae.",
+                            Discount = 10m,
                             IsDeleted = false,
-                            Price = 7.413825425344480m,
-                            Title = "Ipsam."
+                            Price = 427.913074871933000m,
+                            Title = "Possimus."
                         });
                 });
 
