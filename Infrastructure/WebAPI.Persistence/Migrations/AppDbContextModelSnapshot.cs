@@ -22,6 +22,21 @@ namespace WebAPI.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("CategoryProduct", b =>
+                {
+                    b.Property<int>("CategoriesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProuctsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CategoriesId", "ProuctsId");
+
+                    b.HasIndex("ProuctsId");
+
+                    b.ToTable("CategoryProduct");
+                });
+
             modelBuilder.Entity("WebAPI.Domain.Entities.Brand", b =>
                 {
                     b.Property<int>("Id")
@@ -49,23 +64,23 @@ namespace WebAPI.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(1932),
+                            CreatedDate = new DateTime(2024, 3, 28, 12, 16, 46, 445, DateTimeKind.Local).AddTicks(5763),
                             IsDeleted = false,
-                            Name = "Electronics & Kids"
+                            Name = "Home, Kids & Baby"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(2203),
+                            CreatedDate = new DateTime(2024, 3, 28, 12, 16, 46, 445, DateTimeKind.Local).AddTicks(5847),
                             IsDeleted = false,
-                            Name = "Music, Clothing & Health"
+                            Name = "Movies & Movies"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(2220),
+                            CreatedDate = new DateTime(2024, 3, 28, 12, 16, 46, 445, DateTimeKind.Local).AddTicks(5857),
                             IsDeleted = true,
-                            Name = "Electronics"
+                            Name = "Shoes, Tools & Books"
                         });
                 });
 
@@ -101,7 +116,7 @@ namespace WebAPI.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(3578),
+                            CreatedDate = new DateTime(2024, 3, 28, 12, 16, 46, 445, DateTimeKind.Local).AddTicks(7116),
                             IsDeleted = false,
                             Name = "Elektrik",
                             ParentId = 0,
@@ -110,7 +125,7 @@ namespace WebAPI.Persistence.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(3580),
+                            CreatedDate = new DateTime(2024, 3, 28, 12, 16, 46, 445, DateTimeKind.Local).AddTicks(7118),
                             IsDeleted = false,
                             Name = "Moda",
                             ParentId = 0,
@@ -119,7 +134,7 @@ namespace WebAPI.Persistence.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(3581),
+                            CreatedDate = new DateTime(2024, 3, 28, 12, 16, 46, 445, DateTimeKind.Local).AddTicks(7120),
                             IsDeleted = false,
                             Name = "Bilgisayar",
                             ParentId = 1,
@@ -128,7 +143,7 @@ namespace WebAPI.Persistence.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 756, DateTimeKind.Local).AddTicks(3582),
+                            CreatedDate = new DateTime(2024, 3, 28, 12, 16, 46, 445, DateTimeKind.Local).AddTicks(7121),
                             IsDeleted = false,
                             Name = "Kadın",
                             ParentId = 2,
@@ -172,28 +187,28 @@ namespace WebAPI.Persistence.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 757, DateTimeKind.Local).AddTicks(5936),
-                            Description = "Aut est veritatis eos quaerat.",
+                            CreatedDate = new DateTime(2024, 3, 28, 12, 16, 46, 447, DateTimeKind.Local).AddTicks(12),
+                            Description = "Qui sunt sunt adipisci neque.",
                             IsDeleted = false,
-                            Title = "Enim."
+                            Title = "Numquam."
                         },
                         new
                         {
                             Id = 2,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 757, DateTimeKind.Local).AddTicks(5968),
-                            Description = "Maiores aut aut ducimus quo.",
+                            CreatedDate = new DateTime(2024, 3, 28, 12, 16, 46, 447, DateTimeKind.Local).AddTicks(37),
+                            Description = "Molestias perspiciatis iste distinctio deleniti.",
                             IsDeleted = true,
-                            Title = "İllum exercitationem."
+                            Title = "Facilis explicabo."
                         },
                         new
                         {
                             Id = 3,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 757, DateTimeKind.Local).AddTicks(5989),
-                            Description = "Voluptatem corrupti sequi neque et.",
+                            CreatedDate = new DateTime(2024, 3, 28, 12, 16, 46, 447, DateTimeKind.Local).AddTicks(59),
+                            Description = "Excepturi et molestiae est nisi.",
                             IsDeleted = false,
-                            Title = "Laborum."
+                            Title = "Fugiat."
                         });
                 });
 
@@ -239,46 +254,61 @@ namespace WebAPI.Persistence.Migrations
                         {
                             Id = 1,
                             BrandId = 1,
-                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 758, DateTimeKind.Local).AddTicks(7332),
-                            Description = "İd fuga nam velit impedit.",
+                            CreatedDate = new DateTime(2024, 3, 28, 12, 16, 46, 448, DateTimeKind.Local).AddTicks(2358),
+                            Description = "Asperiores id commodi odit et.",
                             Discount = 10m,
                             IsDeleted = false,
-                            Price = 550.01058729543000m,
-                            Title = "Rerum."
+                            Price = 767.025188969371000m,
+                            Title = "Excepturi."
                         },
                         new
                         {
                             Id = 2,
                             BrandId = 1,
-                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 758, DateTimeKind.Local).AddTicks(7366),
-                            Description = "Officiis ut dolorum nihil est.",
+                            CreatedDate = new DateTime(2024, 3, 28, 12, 16, 46, 448, DateTimeKind.Local).AddTicks(2386),
+                            Description = "Excepturi quisquam incidunt tempore qui.",
                             Discount = 10m,
                             IsDeleted = false,
-                            Price = 147.945660785871000m,
-                            Title = "Sapiente."
+                            Price = 292.726256686096000m,
+                            Title = "Adipisci."
                         },
                         new
                         {
                             Id = 3,
                             BrandId = 1,
-                            CreatedDate = new DateTime(2024, 3, 27, 21, 57, 48, 758, DateTimeKind.Local).AddTicks(7391),
-                            Description = "Et eaque consequatur quibusdam quae.",
+                            CreatedDate = new DateTime(2024, 3, 28, 12, 16, 46, 448, DateTimeKind.Local).AddTicks(2410),
+                            Description = "Sint minima distinctio numquam nihil.",
                             Discount = 10m,
                             IsDeleted = false,
-                            Price = 427.913074871933000m,
-                            Title = "Possimus."
+                            Price = 723.716960993157000m,
+                            Title = "Consequatur."
                         });
+                });
+
+            modelBuilder.Entity("CategoryProduct", b =>
+                {
+                    b.HasOne("WebAPI.Domain.Entities.Category", null)
+                        .WithMany()
+                        .HasForeignKey("CategoriesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WebAPI.Domain.Entities.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProuctsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("WebAPI.Domain.Entities.Detail", b =>
                 {
-                    b.HasOne("WebAPI.Domain.Entities.Category", "category")
+                    b.HasOne("WebAPI.Domain.Entities.Category", "Category")
                         .WithMany("Details")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("category");
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("WebAPI.Domain.Entities.Product", b =>

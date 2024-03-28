@@ -15,6 +15,6 @@ namespace WebAPI.Domain.Entities
         public decimal Price { get; set; }
         public decimal Discount { get; set; }
         public Brand Brand { get; set; }
-        ICollection<Category> Categories { get; set; }
+        public ICollection<Category> Categories { get; set; }
     }
 }
