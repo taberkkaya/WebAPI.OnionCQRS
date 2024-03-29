@@ -23,7 +23,7 @@ builder.Services.AddApplication();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || app.Environment.EnvironmentName == "Office")
 {
     app.UseSwagger();
     app.UseSwaggerUI();
