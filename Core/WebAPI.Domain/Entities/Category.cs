@@ -25,7 +25,7 @@ namespace WebAPI.Domain.Entities
         public string Name { get; set; }
         public int Priority { get; set; }
         public ICollection<Detail> Details { get; set; }
-        public ICollection<Product> Proucts { get; set; }
+        public ICollection<ProductCategory> ProductCategories { get; set; }
 
     }
 }
