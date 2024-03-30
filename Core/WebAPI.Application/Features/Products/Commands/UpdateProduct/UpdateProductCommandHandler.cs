@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebAPI.Application.Interfaces.AutoMapper;
 using WebAPI.Application.UnitOfWorks;
 using WebAPI.Domain.Entities;
 
@@ -13,16 +14,32 @@ namespace WebAPI.Application.Features.Products.Commands.UpdateProduct
     {
         private readonly IUnitOfWork unitOfWork;
 
-        //TODO: AutoMapper Ders11 eksik?
-        public UpdateProductCommandHandler(IUnitOfWork unitOfWork)
+        private readonly IMapper mapper;
+        public UpdateProductCommandHandler(IUnitOfWork unitOfWork, IMapper mapper)
         {
             this.unitOfWork = unitOfWork;
+            this.mapper = mapper;
         }
         public async Task Handle(UpdateProductCommandRequest request, CancellationToken cancellationToken)
         {
             var product = await unitOfWork.GetReadRepository<Product>().GetAsync(x => x.Id == request.Id && !x.IsDeleted);
 
-            
+            var map = mapper.Map<Product, UpdateProductCommandRequest>(request);
+
+            var productCategories = await unitOfWork.GetReadRepository<ProductCategory>().GetAllAsync(x => x.ProductId == product.Id);
+
+            await unitOfWork.GetWriteRepository<ProductCategory>().HardDeleteRangeAysnc(productCategories);
+
+            foreach (var categoryId in request.CategoryIds)
+                await unitOfWork.GetWriteRepository<ProductCategory>().AddAsync(new()
+                {
+                    CategoryId = categoryId,
+                    ProductId = product.Id
+                });
+
+            await unitOfWork.GetWriteRepository<Product>().UpdateAsync(map);
+
+            await unitOfWork.SaveAsync();
         }
     }
 }

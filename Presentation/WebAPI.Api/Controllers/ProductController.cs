@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.Application.Features.Products.Commands.CreateProduct;
+using WebAPI.Application.Features.Products.Commands.DeleteProduct;
+using WebAPI.Application.Features.Products.Commands.UpdateProduct;
 using WebAPI.Application.Features.Products.Queries.GetAllProducts;
 
 namespace WebAPI.Api.Controllers
@@ -26,11 +28,28 @@ namespace WebAPI.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateProducts(CreateProductsCommandRequest request)
+        public async Task<IActionResult> CreateProduct(CreateProductsCommandRequest request)
         {
             await mediator.Send(request);
 
             return Ok();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateProduct(UpdateProductCommandRequest request)
+        {
+            await mediator.Send(request);
+
+            return Ok();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteProduct(DeleteProductCommandRequest request)
+        {
+            await mediator.Send(request);
+
+            return Ok();
+        }
+
     }
 }
