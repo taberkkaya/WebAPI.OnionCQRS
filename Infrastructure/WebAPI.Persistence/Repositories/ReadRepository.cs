@@ -54,7 +54,7 @@ namespace WebAPI.Persistence.Repositories
 
             //queryable.Where(predicate);
 
-            return await queryable.FirstOrDefaultAsync();
+            return await queryable.FirstOrDefaultAsync(predicate);
         }
 
         public async Task<int> CountAsync(Expression<Func<T, bool>>? predicate = null)

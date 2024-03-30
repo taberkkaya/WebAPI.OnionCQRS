@@ -41,5 +41,12 @@ namespace WebAPI.Persistence.Repositories
             await Task.Run(() => Table.Remove(entity));
         }
 
+        public async Task HardDeleteRangeAysnc(IList<T> entity)
+        {
+
+            await Task.Run(() => Table.RemoveRange(entity));
+        }
+
+
     }
 }
