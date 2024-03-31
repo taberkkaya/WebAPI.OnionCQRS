@@ -1,6 +1,7 @@
 using WebAPI.Persistence;
 using WebAPI.Application;
 using WebAPI.Mapper;
+using WebAPI.Application.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,8 @@ if (app.Environment.IsDevelopment() || app.Environment.EnvironmentName == "Offic
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.ConfigureExceptionHandlingMiddleware();
 
 app.UseAuthorization();
 
