@@ -39,8 +39,7 @@ namespace WebAPI.Application.Exceptions
 
             List<string> errors = new() 
             {
-            $"Message : {exception.Message}",
-            $"Inner Exception : {exception.InnerException?.ToString()}"
+            $"Message : {exception.Message}"
             };
 
             return httpContext.Response.WriteAsync(new ExceptionModel
