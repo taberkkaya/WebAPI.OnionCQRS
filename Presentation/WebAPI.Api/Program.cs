@@ -1,3 +1,4 @@
+using WebAPI.Infrastructre;
 using WebAPI.Persistence;
 using WebAPI.Application;
 using WebAPI.Mapper;
@@ -20,6 +21,7 @@ builder.Configuration
     .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
 
 builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddInfrastruce(builder.Configuration);
 builder.Services.AddApplication();
 builder.Services.AddCustomMapper();
 
