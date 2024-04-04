@@ -1,23 +1,24 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebAPI.Application.Bases;
 using WebAPI.Application.Features.Products.Rules;
+using WebAPI.Application.Interfaces.AutoMapper;
 using WebAPI.Application.UnitOfWorks;
 using WebAPI.Domain.Entities;
 
 namespace WebAPI.Application.Features.Products.Commands.CreateProduct
 {
-    public class CreateProductsCommandHandler : IRequestHandler<CreateProductsCommandRequest, Unit>
+    public class CreateProductsCommandHandler : BaseHandler, IRequestHandler<CreateProductsCommandRequest, Unit>
     {
-        private readonly IUnitOfWork unitOfWork;
         private readonly ProductRules productRules;
 
-        public CreateProductsCommandHandler(IUnitOfWork unitOfWork, ProductRules productRules)
+        public CreateProductsCommandHandler(ProductRules productRules, IMapper mapper, IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor) : base(mapper, unitOfWork, httpContextAccessor)
         {
-            this.unitOfWork = unitOfWork;
             this.productRules = productRules;
         }
         public async Task<Unit> Handle(CreateProductsCommandRequest request, CancellationToken cancellationToken)
@@ -39,7 +40,7 @@ namespace WebAPI.Application.Features.Products.Commands.CreateProduct
                         CategoryId = categoryId
                     });
 
-                await unitOfWork.SaveAsync();          
+                await unitOfWork.SaveAsync();
             }
             return Unit.Value;
         }

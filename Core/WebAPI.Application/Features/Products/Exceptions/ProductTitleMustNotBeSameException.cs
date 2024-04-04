@@ -7,7 +7,7 @@ using WebAPI.Application.Bases;
 
 namespace WebAPI.Application.Features.Products.Exceptions
 {
-    public class ProductTitleMustNotBeSameException : BaseExceptions
+    public class ProductTitleMustNotBeSameException : BaseException
     {
         public ProductTitleMustNotBeSameException() : base("Ürün başlığı zaten mevcut.") { }
 
