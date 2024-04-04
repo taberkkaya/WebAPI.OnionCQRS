@@ -40,7 +40,7 @@ builder.Services.AddSwaggerGen(c =>
         Scheme = "Bearer",
         BearerFormat = "JWT",
         In = ParameterLocation.Header,
-        Description = "'Bearer' yazýp boþluk býraktýktan sonra Token'ý girebilirsiniz \r\n\r\n Örnek: \"Baerer i_gr#8_obr3!6t3^*t^dt$i%j#9ml57!@q2nhi9a6o)(&_sdh^"
+        Description = "'Bearer' yazýp boþluk býraktýktan sonra Token'ý girebilirsiniz \r\n\r\n Örnek: \"Bearer i_gr#8_obr3!6t3^*t^dt$i%j#9ml57!@q2nhi9a6o)(&_sdh^"
     });
     c.AddSecurityRequirement(new OpenApiSecurityRequirement()
     {

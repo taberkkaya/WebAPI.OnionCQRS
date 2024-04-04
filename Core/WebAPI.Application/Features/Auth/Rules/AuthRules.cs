@@ -16,5 +16,11 @@ namespace WebAPI.Application.Features.Auth.Rules
             if (user is not null) throw new UserAlreadyExistException();
             return Task.CompletedTask;
         }
+
+        public Task EmailOrPasswordShoulNotBeInvalid(User? user, bool checkPassword)
+        {
+            if (user is null || !checkPassword) throw new EmailOrPasswordShoulNotBeInvalidException();
+            return Task.CompletedTask;
+        }
     }
 }

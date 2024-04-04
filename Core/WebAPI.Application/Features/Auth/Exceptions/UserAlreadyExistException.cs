@@ -11,4 +11,5 @@ namespace WebAPI.Application.Features.Auth.Exceptions
     {
         public UserAlreadyExistException() : base("Böyle bir kullanıcı zaten mevcut.") { }
     }
+
 }
