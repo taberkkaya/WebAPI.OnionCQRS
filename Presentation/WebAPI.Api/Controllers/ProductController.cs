@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebAPI.Application.Features.Brands.Commands.CreateBrand;
 using WebAPI.Application.Features.Products.Commands.CreateProduct;
 using WebAPI.Application.Features.Products.Commands.DeleteProduct;
 using WebAPI.Application.Features.Products.Commands.UpdateProduct;
@@ -47,6 +48,14 @@ namespace WebAPI.Api.Controllers
 
         [HttpPost]
         public async Task<IActionResult> DeleteProduct(DeleteProductCommandRequest request)
+        {
+            await mediator.Send(request);
+
+            return Ok();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateBrand(CreateBrandCommandRequest request)
         {
             await mediator.Send(request);
 

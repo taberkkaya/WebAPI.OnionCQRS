@@ -52,12 +52,5 @@ namespace WebAPI.Api.Controllers
             return StatusCode(StatusCodes.Status200OK);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> RevokeAll()
-        {
-            var response = await mediator.Send(new RevokeAllCommandRequest());
-
-            return StatusCode(StatusCodes.Status200OK);
-        }
     }
 }
