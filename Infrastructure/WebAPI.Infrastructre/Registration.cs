@@ -8,7 +8,9 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using WebAPI.Application.Interfaces.RedisCache;
 using WebAPI.Application.Interfaces.Tokens;
+using WebAPI.Infrastructre.RedisCache;
 using WebAPI.Infrastructre.Tokens;
 
 namespace WebAPI.Infrastructre
@@ -19,6 +21,9 @@ namespace WebAPI.Infrastructre
         {
             services.Configure<TokenSettings>(configuration.GetSection("JWT"));
             services.AddTransient<ITokenService, TokenService>();
+            services.Configure<RedisCacheSettings>(configuration.GetSection("RedisCacheSettings"));
+            services.AddTransient<IRedisCacheService, RedisCacheService>();
+
             services.AddAuthentication(opt =>
             {
                 opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -39,6 +44,10 @@ namespace WebAPI.Infrastructre
                 };
             });
 
+            services.AddStackExchangeRedisCache(opt => {
+                opt.Configuration = configuration["RedisCacheSettings:ConnectionString"];
+                opt.InstanceName = configuration["RedisCacheSettings:InstanceName"];
+            });
         }
     }
 }
