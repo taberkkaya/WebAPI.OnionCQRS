@@ -12,5 +12,5 @@
 ![3](https://github.com/user-attachments/assets/ffba942a-e29d-47e0-92dd-59b442277fea)
 
 ## 📚 Source  
-📺 - *[Cem Keskin's YouTube channel](https://www.youtube.com/watch?v=luTUl8CSudM&list=PLrSCwxkucNmw_sjxZZHaWj6ySakPgSCbv&pp=iAQB)*
-🐙 - *[YoutubeApi-OnionCQRS](https://github.com/cemkeskin12/YoutubeApi-OnionCQRS)*
+📺 *[Cem Keskin's YouTube channel](https://www.youtube.com/watch?v=luTUl8CSudM&list=PLrSCwxkucNmw_sjxZZHaWj6ySakPgSCbv&pp=iAQB)*
+🐙 *[YoutubeApi-OnionCQRS](https://github.com/cemkeskin12/YoutubeApi-OnionCQRS)*
